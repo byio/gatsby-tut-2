@@ -9,6 +9,8 @@ export default function Template ({ data }) {
       <h1>{post.frontmatter.title}</h1>
       <br />
       <small>Posted by {post.frontmatter.author} on {post.frontmatter.date}.</small>
+      <br/>
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>
   );
 }
