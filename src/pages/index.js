@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
     {
       data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <h3>{post.node.frontmatter.title}</h3>
+          <Link to={post.node.frontmatter.path}><h3>{post.node.frontmatter.title}</h3></Link>
           <small>Posted on {post.node.frontmatter.date} by {post.node.frontmatter.author}</small>
         </div>
       ))
